@@ -1,0 +1,36 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ developer.company }} {{ year }}. All rights reserved.
+//
+
+import Foundation
+
+protocol {{ module_info.name }}BusinessLogic
+{
+  // Interactor input protocol methods declaration
+
+}
+
+protocol {{ module_info.name }}DataStore
+{
+  // Data source properties for passing data between modules
+}
+
+class {{ module_info.name }}Interactor: {{ module_info.name }}BusinessLogic, ___VARIABLE_sceneName___DataStore
+{
+  // MARK: - Properties -
+  var presenter: {{ module_info.name }}PresentationLogic?
+  var worker: {{ module_info.name }}WorkerInput?
+
+  // MARK: - Input methods implementation -
+
+}
+
+extension {{ module_info.name }}Interactor: {{ module_info.name }}WorkerOutput {
+
+  // MARK: - Worker output methods implementation -
+
+}

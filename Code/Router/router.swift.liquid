@@ -1,0 +1,30 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ developer.company }} {{ year }}. All rights reserved.
+//
+
+import UIKit
+
+@objc protocol {{ module_info.name }}RoutingLogic
+{
+  //Router input protocol methods declaration
+
+}
+
+protocol {{ module_info.name }}DataPassing
+{
+  //Data passing protocol methods declaration. Methods for passing data between different modules
+  var dataStore: {{ module_info.name }}DataStore? { get }
+}
+
+class {{ module_info.name }}Router: NSObject, {{ module_info.name }}RoutingLogic, {{ module_info.name }}DataPassing
+{
+  weak var viewController: {{ module_info.name }}ViewController?
+  var dataStore: {{ module_info.name }}DataStore?
+
+  // MARK: - Routing -
+
+}

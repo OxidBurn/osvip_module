@@ -1,0 +1,42 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ developer.company }} {{ year }}. All rights reserved.
+//
+
+import UIKit
+
+protocol {{ module_info.name }}DisplayLogic: class
+{
+  //View controller input protocol methods declaration
+
+}
+
+class {{ module_info.name }}ViewController: UIViewController, {{ module_info.name }}DisplayLogic
+{
+
+  // MARK: - Properties -
+  var interactor: {{ module_info.name }}BusinessLogic?
+  var router: (NSObjectProtocol & {{ module_info.name }}RoutingLogic & {{ module_info.name }}DataPassing)?
+
+  // MARK: - View lifecycle -
+
+  override func viewDidLoad()
+  {
+    super.viewDidLoad()
+  }
+
+  // MARK: - Routing -
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+  {
+    if let scene = segue.identifier {
+      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+      if let router = router, router.responds(to: selector) {
+        router.perform(selector, with: segue)
+      }
+    }
+  }
+}
