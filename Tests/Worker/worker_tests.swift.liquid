@@ -1,0 +1,35 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ developer.company }} {{ year }}. All rights reserved.
+//
+
+@testable import {{ module_info.project_name }}
+import XCTest
+
+class {{ module_info.name }}WorkerTests: XCTestCase {
+    // MARK: Subject under test
+
+    var sut: {{ module_info.name }}Worker!
+
+    // MARK: Test lifecycle
+
+    override func setUp() {
+        super.setUp()
+        setup{{ module_info.name }}Worker()
+    }
+
+    override func tearDown() {
+        super.tearDown()
+    }
+
+    // MARK: Test setup
+
+    func setup{{ module_info.name }}Worker() {
+        sut = {{ module_info.name }}Worker()
+    }
+
+    // MARK: Tests
+}

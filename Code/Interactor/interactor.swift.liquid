@@ -8,18 +8,7 @@
 
 import Foundation
 
-protocol {{ module_info.name }}BusinessLogic
-{
-  // Interactor input protocol methods declaration
-
-}
-
-protocol {{ module_info.name }}DataStore
-{
-  // Data source properties for passing data between modules
-}
-
-class {{ module_info.name }}Interactor: {{ module_info.name }}BusinessLogic, ___VARIABLE_sceneName___DataStore
+class {{ module_info.name }}Interactor: {{ module_info.name }}BusinessLogic, {{ module_info.name }}DataStore
 {
   // MARK: - Properties -
   var presenter: {{ module_info.name }}PresentationLogic?

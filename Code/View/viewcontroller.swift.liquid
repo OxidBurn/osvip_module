@@ -8,15 +8,8 @@
 
 import UIKit
 
-protocol {{ module_info.name }}DisplayLogic: class
-{
-  //View controller input protocol methods declaration
-
-}
-
 class {{ module_info.name }}ViewController: UIViewController, {{ module_info.name }}DisplayLogic
 {
-
   // MARK: - Properties -
   var interactor: {{ module_info.name }}BusinessLogic?
   var router: (NSObjectProtocol & {{ module_info.name }}RoutingLogic & {{ module_info.name }}DataPassing)?

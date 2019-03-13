@@ -7,12 +7,12 @@ OnSight team use this viper template for generating modules on Viper architectur
 ----
 ### Generating Rambafile
 
-- Open **Terminal** app inside `pod` project folder: 
+- Open **Terminal** app inside `pod` project folder:
     - `generamba setup`
 
 **The list of questions for installation**
 
-- The company name which will be used in the headers: 
+- The company name which will be used in the headers:
     - `Client company name`
 
 - The name of your project is TestGeneramba. Do you want to use it? (yes/no)
@@ -24,7 +24,7 @@ OnSight team use this viper template for generating modules on Viper architectur
 - The path to a .xcodeproj file of the project is 'TestGeneramba.xcodeproj'. Do you want to use it? (yes/no)
     - `..\prj\TestGeneramba.xcodeproj` - where **TestGeneramba** it's project name
 
-- Select the appropriate target for adding your MODULES (type the index): eneramba
+- Select the appropriate target for adding your MODULES (type the index):
     - leave this answer is empty, just press `Enter`
 
 - Are you using unit-tests in this project? (yes/no)
@@ -43,7 +43,7 @@ OnSight team use this viper template for generating modules on Viper architectur
     - `no`
 
 - Do you want to add some well known templates to the Rambafile? (yes/no)
-    - `yes` - just for case, when we want to try generate modules with standart templates
+    - `yes` - just for case, when we want to try generate modules with standart templates, if not then choose option `no`
 
 
 ### Creating Templates
@@ -51,8 +51,8 @@ OnSight team use this viper template for generating modules on Viper architectur
 
 - Open file **`Rambafile`** generated file after setup Generamba for project
 
-- Add template to the **`templates`** list at the bottom of the document: 
-       - `- {name: osviper_module, git: 'https://bitbucket.org/onsightukraine/osviper_module'}`
+- Add template to the **`templates`** list at the bottom of the document:
+       - `- {name: osvip_module, git: 'https://bitbucket.org/onsightukraine/osvip_module'}`
 
 - Run command:
        - `generamba template install`
@@ -61,4 +61,4 @@ OnSight team use this viper template for generating modules on Viper architectur
        - `generamba template list`
 
 - Generate new module with new template:
-      - `generamba gen RegisterModule osviper_module`
+      - `generamba gen RegisterModule osvip_module` - where **RegisterModule** it's new module name

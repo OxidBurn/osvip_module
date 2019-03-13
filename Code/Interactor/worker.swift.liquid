@@ -8,20 +8,16 @@
 
 import Foundation
 
-protocol {{ module_info.name }}WorkerInput {
-  //Worker input protocol methods declaration
-}
-
-protocol {{ module_info.name }}WorkerOutput {
-  //Worker output protocol methods declaration
-
-}
-
 class {{ module_info.name }}WorkerImp: {{ module_info.name }}WorkerInput
 {
 	// MARK: - Properties -
 	weak var output: {{ module_info.name }}WorkerOutput?
-	
+
+  // MARK: - Initializer -
+  init(output: {{ module_info.name }}WorkerOutput) {
+    self.output = output
+  }
+
   // MARK: - Input protocol methods -
 
 }

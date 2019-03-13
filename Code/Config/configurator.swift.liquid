@@ -20,14 +20,14 @@ class {{ module_info.name }}Configurator {
 
   //MARK: - Configure method methods -
   private func configureScene(with viewController: {{ module_info.name }}ViewController) {
-    let r = ApplicationAssembly.assembler.resolver as! Container
+    let _ = ApplicationAssembly.assembler.resolver as! Container
 
     let presenter = {{ module_info.name }}Presenter()
     presenter.viewController = viewController
 
-    let worker = {{ module_info.name }}WorkerImp()
-
     let interactor = {{ module_info.name }}Interactor()
+    let worker = {{ module_info.name }}WorkerImp(output: interactor)
+
     interactor.presenter = presenter
     interactor.worker    = worker
 

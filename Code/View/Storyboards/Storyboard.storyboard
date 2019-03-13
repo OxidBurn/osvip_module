@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q7E-8Q-jeL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="9AB-jY-vEN">
             <objects>
-                <viewController id="q7E-8Q-jeL" sceneMemberID="viewController">
+                <viewController id="q7E-8Q-jeL" customClass="{{ module_info.name }}ViewController" customModule="{{ module_info.project_name }}" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Yh-iF-ngB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +22,11 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Okf-eW-Cid" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="TNh-bF-sqn"/>
+                <customObject id="TNh-bF-sqn" customClass="{{ module_info.name }}Initializer" customModule="{{ module_info.project_name }}" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="q7E-8Q-jeL" id="0Qy-IK-RhC"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="10" y="29"/>
         </scene>

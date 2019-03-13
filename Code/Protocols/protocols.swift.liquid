@@ -1,0 +1,54 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ developer.company }} {{ year }}. All rights reserved.
+//
+
+// MARK: - Interactor protocols -
+
+protocol {{ module_info.name }}BusinessLogic {
+  // Interactor input protocol methods declaration
+}
+
+protocol {{ module_info.name }}DataStore {
+  // Data source properties for passing data between modules
+}
+
+
+// MARK: - Worker protocols -
+
+protocol {{ module_info.name }}WorkerInput {
+  //Worker input protocol methods declaration
+}
+
+protocol {{ module_info.name }}WorkerOutput: class {
+  //Worker output protocol methods declaration
+}
+
+
+// MARK: - Presenter protocols -
+
+protocol {{ module_info.name }}PresentationLogic {
+  //Presenter input protocol methods declaration
+}
+
+
+// MAKR: - Routers protocols -
+
+@objc protocol {{ module_info.name }}RoutingLogic {
+  //Router input protocol methods declaration
+}
+
+protocol {{ module_info.name }}DataPassing {
+  //Data passing protocol methods declaration. Methods for passing data between different modules
+  var dataStore: {{ module_info.name }}DataStore? { get }
+}
+
+
+// MARK: - View protocols -
+
+protocol {{ module_info.name }}DisplayLogic: class {
+  //View controller input protocol methods declaration
+}
